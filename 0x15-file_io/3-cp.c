@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 char *create_buffer(char *file);
-void close_file(int fd);
+void close_file(int gi);
 
 /**
  * create_buffer - In 1024 bytes are placed separate using for a buffer.
