@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 char *create_buffer(char *file);
-void close_file(int gi);
+void close_file(int fd);
 
 /**
  * create_buffer - In 1024 bytes are placed separate using for a buffer.
@@ -29,17 +29,17 @@ char *create_buffer(char *file)
 
 /**
  * close_file - file classifications are closed down.
- * @gi: The final segment of the file's descriptor.
+ * @fd: The final segment of the file's descriptor.
  */
-void close_file(int gi)
+void close_file(int fd)
 {
 	int a;
 
-	a = close(gi);
+	a = close(fd);
 
 	if (a == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close gi %d\n", gi);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
